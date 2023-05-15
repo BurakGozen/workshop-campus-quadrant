@@ -1,6 +1,7 @@
 import "@newcodedevelopment/ui/dist/style.css";
 import type { AppProps } from "next/app";
 import localFont from "next/font/local";
+import "../styles/index.css";
 
 const font = localFont({
   src: [
