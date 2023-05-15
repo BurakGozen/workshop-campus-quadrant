@@ -39,7 +39,7 @@ export default function Exercise({ id, file }: ExerciseProps) {
 
       <div id="app"></div>
 
-      <Script type="module" dangerouslySetInnerHTML={{ __html: file }} />
+      <Script id={`exercise-${id}`} type="module" dangerouslySetInnerHTML={{ __html: file }} />
     </>
   );
 }
