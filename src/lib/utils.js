@@ -18,6 +18,21 @@ function createWorkingArea() {
   return app;
 }
 
+function createContext(app) {
+  app.innerHTML = `<canvas id="canvas"></canvas>`;
+
+  const canvas = document.getElementById("canvas");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.margin = 0;
+  canvas.style.padding = 0;
+  canvas.style.backgroundColor = "#d8d8d8";
+  canvas.style.position = "absolute";
+  canvas.style.top = 0;
+  canvas.style.left = 0;
+  return canvas.getContext("2d");
+}
+
 class TitleElement {
   title = document.createElement("h1");
   innerHTML = "";
@@ -26,26 +41,38 @@ class TitleElement {
     this.app = app;
   }
 
-  #checkIfValueIsUndefined(value) {
-    return typeof value !== "undefined";
+  createElement(value, callback) {
+    const valueType = typeof value;
+
+    switch (valueType) {
+      case "string":
+        this.#createString(value, callback);
+        break;
+      case "number":
+        this.#createNumber(value, callback);
+        break;
+      case "boolean":
+        this.#createBoolean(value, callback);
+        break;
+      default:
+    }
   }
 
   #createTitleElement(value, className, callback) {
-    const valid = this.#checkIfValueIsUndefined(value);
-    let text = valid ? `<span class="${className}">${value}</span>` : "";
+    let text = `<span class="${className}">${value}</span>`;
     if (callback) text = callback(text);
     this.innerHTML += text + "\n";
   }
 
-  createString(value, callback) {
+  #createString(value, callback) {
     this.#createTitleElement(value, "text-green-500", callback);
   }
 
-  createNumber(value, callback) {
+  #createNumber(value, callback) {
     this.#createTitleElement(value, "text-orange-500", callback);
   }
 
-  createBoolean(value, callback) {
+  #createBoolean(value, callback) {
     this.#createTitleElement(value, "text-blue-500", callback);
   }
 

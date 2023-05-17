@@ -1,4 +1,4 @@
 const { app, title } = init();
 
-title.createString(hallo);
+if (typeof hallo !== "undefined") title.createElement(checkVariable(hallo));
 title.render();

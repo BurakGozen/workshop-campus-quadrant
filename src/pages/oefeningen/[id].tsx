@@ -46,12 +46,8 @@ export default function Exercise({ id, file }: ExerciseProps) {
 
 export async function getServerSideProps({ params }: Params) {
   const { id } = params;
-  const index = parseInt(id as string) - 1;
 
   if (!exerciseExists(id)) return { notFound: true };
-
-  const contextPath = path.resolve(process.cwd(), "src/lib/context.js");
-  const context = exercises[index].canvas ? readFileSync(contextPath, "utf-8") : "";
 
   const utilsPath = path.resolve(process.cwd(), "src/lib/utils.js");
   const utils = readFileSync(utilsPath, "utf-8");
@@ -67,7 +63,7 @@ export async function getServerSideProps({ params }: Params) {
   const exercisePath = path.resolve(process.cwd(), `oefeningen/oefening-${id}.js`);
   const exercise = readFileSync(exercisePath, "utf-8");
 
-  const file = context + utils + before + exercise + after;
+  const file = utils + before + exercise + after;
 
   return {
     props: {
