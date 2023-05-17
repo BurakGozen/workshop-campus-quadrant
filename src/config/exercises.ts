@@ -20,4 +20,9 @@ export const exercises: Exercise[] = [
     name: "Rekenen",
     canvas: false,
   },
+  {
+    id: 4,
+    name: "Quiz",
+    canvas: false,
+  },
 ];
