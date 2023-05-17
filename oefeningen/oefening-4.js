@@ -8,6 +8,3 @@
 // 5. De aarde draait rond de maan.
 
 let antwoorden = [true];
-
-
-

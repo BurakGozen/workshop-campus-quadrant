@@ -12,21 +12,13 @@ const questions = [
 const answersIsValid = typeof antwoorden !== "undefined";
 
 questions.forEach((question, index) => {
-  const isCorrect =
-    answersIsValid && correctAnswers[index] === antwoorden[index];
+  const isCorrect = answersIsValid && correctAnswers[index] === antwoorden[index];
+  const questionClass = isCorrect ? "text-green-500" : answersIsValid ? "text-red-500" : "";
 
-  const questionClass = isCorrect
-    ? "text-green-500"
-    : answersIsValid
-    ? "text-red-500"
-    : "";
-
-  title.createBoolean(
+  title.createElement(
     answersIsValid ? antwoorden[index] : "",
     (title) =>
-      `<span class="${questionClass}">${
-        index + 1
-      }. ${question}</span>&nbsp; → &nbsp;${title}`
+      `<span class="${questionClass}">${index + 1}. ${question}</span>&nbsp; → &nbsp;${title}`,
   );
 });
 

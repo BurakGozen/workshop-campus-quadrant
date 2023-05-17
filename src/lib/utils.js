@@ -55,6 +55,8 @@ class TitleElement {
         this.#createBoolean(value, callback);
         break;
       default:
+        this.#createTitleElement("", "", callback);
+        break;
     }
   }
 
