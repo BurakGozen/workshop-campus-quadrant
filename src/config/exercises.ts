@@ -31,4 +31,25 @@ export const exercises: Exercise[] = [
   {
     name: "De kikker",
   },
+  {
+    name: "Langer dan",
+  },
+  {
+    name: "Positief of negatief",
+  },
+  {
+    name: "Leeftijd",
+  },
+  {
+    name: "Verzendkosten",
+  },
+  {
+    name: "Beoordeling student",
+  },
+  {
+    name: "Bereken de korting",
+  },
+  {
+    name: "Loop",
+  },
 ].map((exercise, index) => ({ ...exercise, id: index + 1 }));
