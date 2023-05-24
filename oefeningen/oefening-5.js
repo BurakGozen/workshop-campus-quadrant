@@ -4,7 +4,7 @@
 // d. Zorg ervoor dat je variable eersteGetal en variable tweedeGetal gebruikt om variable resultaat een waarde te geven.
 // e. Je mag enkel variable eersteGetal en variable tweedeGetal aanpassen om het getal te raden.
 
-let eersteGetal = 57;
-let tweedeGetal = 2;
+let eersteGetal = 18;
+let tweedeGetal = 0;
 
 let resultaat = eersteGetal - tweedeGetal;

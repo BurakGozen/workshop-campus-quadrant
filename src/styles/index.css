@@ -1,3 +1,5 @@
+@import url("./frog.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
