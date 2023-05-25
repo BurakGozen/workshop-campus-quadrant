@@ -5,8 +5,6 @@ const aftrekkenParams = [5, 2];
 const vermenigvuldigenParams = [3, 4];
 const delenParams = [12, 4];
 
-const questionClass = (correct) => (correct ? "text-green-500" : "text-red-500");
-
 if (typeof toevoegen !== "undefined") {
   const correctAnswer = toevoegenParams[0] + toevoegenParams[1];
   const isCorrect = toevoegen(...toevoegenParams) === correctAnswer;

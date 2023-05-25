@@ -1,25 +1,29 @@
 const { app, title } = init();
 
-const results = [
-  typeof resultaat1 !== "undefined" && resultaat1,
-  typeof resultaat2 !== "undefined" && resultaat2,
-  typeof resultaat3 !== "undefined" && resultaat3,
-  typeof resultaat4 !== "undefined" && resultaat4,
-  typeof resultaat5 !== "undefined" && resultaat5,
-];
+const results = [];
 
-const questionClass = (correct) => (correct ? "text-green-500" : "text-red-500");
+if (typeof resultaat1 !== "undefined") results.push(resultaat1);
+if (typeof resultaat2 !== "undefined") results.push(resultaat2);
+if (typeof resultaat3 !== "undefined") results.push(resultaat3);
+if (typeof resultaat4 !== "undefined") results.push(resultaat4);
+if (typeof resultaat5 !== "undefined") results.push(resultaat5);
 
-const isCorrect = typeof isLangerDan !== "undefined" && isLangerDan("xx", "x") === true;
+if (typeof isLangerDan != "undefined") {
+  const isCorrect = isLangerDan("xx", "x") === true;
+  const message = isCorrect
+    ? "De functie isLangerDan werkt :)"
+    : "De functie isLangerDan werkt niet :(";
+
+  title.createElement(
+    null,
+    () => `<span class="${questionClass(isCorrect)}">${message}</span> <br>`,
+  );
+}
 
 results.map((result, index) => {
-  title.createElement(
-    result,
-    (title) =>
-      `<span class="${questionClass(isCorrect)}">Antwoord van resultaat${
-        index + 1
-      } is</span> : ${title}`,
-  );
+  if (typeof result === "undefined") return;
+
+  title.createElement(result, (t) => `Het antwoord van resultaat${index + 1} is = ${t}`);
 });
 
 title.render();

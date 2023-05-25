@@ -1,15 +1,6 @@
-// Maak een variabele genaamd nummer en geef deze een numerieke waarde.
-// Maak een lege variabele genaamd isPositief
+// a. Maak een variabele genaamd nummer en geef deze een numerieke waarde.
+// b. Maak een lege variabele genaamd isPositief
 
-// Schrijf een if statement die controleert of het een positieve of negatieve getal is.
-// Als het een positoef getal is zet je de waarde van isPositief naar true
-// En als het negatief is zet je de waarde van isPositief naar true.
-
-let nummer = 0;
-let isPositief;
-
-if (nummer >= 0) {
-  isPositief = true;
-} else {
-  isPositief = false;
-}
+// c. Schrijf een if statement die controleert of het een positief of negatief getal is.
+// d. Als het een positoef getal is pas je de waarde van isPositief aan naar true.
+// e. En als het negatief is pas je de waarde van isPositief aan naar false.

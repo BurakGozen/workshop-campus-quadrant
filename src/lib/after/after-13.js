@@ -1,7 +1,14 @@
 const { app, title } = init();
 
-if (typeof kost !== "undefined") {
-  title.createElement(kost, (title) => `Je verzendkosten bedraagt ${kost / 0 ? "€" : ""}${title} `);
+const weights = [1, 2, 5, 6, 8, 10, 15, 30, 50];
+
+if (typeof berekenVerzendkosten !== "undefined") {
+  weights.forEach((weight) => {
+    title.createElement(
+      berekenVerzendkosten(weight),
+      (title) => `De verzendkosten voor het gewicht van ${weight}kg bedraagt € ${title} `,
+    );
+  });
 }
 
 title.render();

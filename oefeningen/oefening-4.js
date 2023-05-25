@@ -6,5 +6,3 @@
 // 3. De Eiffeltoren staat in Londen.
 // 4. Water kookt bij een temperatuur van 100 graden Celsius.
 // 5. De aarde draait rond de maan.
-
-let antwoorden = [true];

@@ -1,16 +1,11 @@
-// Maak een variabele genaamd resultaat1 waar je je isLangerDan functie oproept en 2 waardes mee geeft
-// Maak een variabele genaamd resultaat2 waar je je isLangerDan functie oproept en 2 waardes mee geeft
-// Maak een functie genaamd isLangerDan(eersteWoord, tweedeWoord) die true of false terug geeft.
-// Deze functie moet controlren of eersteWoord langer is dan tweedeWoord als dat zo is geeft het true terug anderes false.
+// a. Maak een functie genaamd isLangerDan die de lengte van twee woorden met elkaar vergelijkt.
+// b. Als het eerste woord langer is dan het tweede woord, retourneer dan true.
+// c. Als het eerste woord niet langer is dan het tweede woord, retourneer dan false.
+
+// d. Maak een variabele genaamd resultaat1 waar je je isLangerDan functie oproept met twee strings als waarde.
+// e. Maak een variabele genaamd resultaat2 waar je je isLangerDan functie oproept met twee strings als waarde.
+// f. Maak een variabele genaamd resultaat3 waar je je isLangerDan functie oproept met twee strings als waarde.
+// g. Maak een variabele genaamd resultaat4 waar je je isLangerDan functie oproept met twee strings als waarde.
+// h. Maak een variabele genaamd resultaat5 waar je je isLangerDan functie oproept met twee strings als waarde.
 
 // Tip: Als je de lengte van een variabele in JavaScript wilt achterhalen, kun je de eigenschap .length gebruiken. plak het achter je variabele.
-
-let resultaat1 = isLangerDan("Ozkann", "Burak");
-let resultaat2 = isLangerDan("sfsdf", "sdfsdf");
-let resultaat3 = isLangerDan("sdfsdf", "sdfsdfsdf");
-let resultaat4 = isLangerDan("sdfsdfsdf", "sdf");
-let resultaat5 = isLangerDan("sfsdf", "Bursdfsdfsak");
-
-function isLangerDan(eersteWoord, tweedeWoord) {
-  return eersteWoord.length > tweedeWoord.length;
-}

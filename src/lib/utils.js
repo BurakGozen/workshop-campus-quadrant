@@ -18,6 +18,8 @@ function createWorkingArea() {
   return app;
 }
 
+const questionClass = (correct) => (correct ? "text-green-500" : "text-red-500");
+
 function createContext(app) {
   app.innerHTML = `<canvas id="canvas"></canvas>`;
 
